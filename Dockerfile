@@ -15,3 +15,7 @@ RUN ng build
 # stage 2
 FROM nginx:alpine
 COPY --from=node /app/dist /usr/share/nginx/html
+
+
+# docker run -it --rm  -p 1000:80 -v $(pwd)/dist:/usr/share/nginx/html nginx:alpine sh
+# docker run -d  -p 1000:80 -v $(pwd)/dist:/usr/share/nginx/html nginx:alpine
